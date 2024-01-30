@@ -1,0 +1,26 @@
+@mixin box-shadow-with-hover(
+	$size: 8px,
+	$fade: 10px,
+	$x-shift: 0px,
+	$y-shift: 4px,
+	$color: rgba(0,0,0,0.1),
+	$color-hover: rgba(0,0,0,0.3)
+	) {
+	transition: 1s;
+	box-shadow: $color $x-shift $y-shift $fade $size;
+	&:hover {
+		box-shadow: $color-hover $x-shift $y-shift $fade $size;
+	}
+}
+
+@mixin box-shadow(
+	$size: 8px,
+	$fade: 10px,
+	$x-shift: 0px,
+	$y-shift: 4px,
+	$color: rgba(0,0,0,0.1),
+	$color-hover: rgba(0,0,0,0.3)
+	) {
+	transition: 1s;
+	box-shadow: $color $x-shift $y-shift $fade $size;
+}
